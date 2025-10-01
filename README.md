@@ -31,7 +31,7 @@ install software
 
 matplotlib, astropy, scipy, matplotylib, sqlite
 
-conda create --name SKADS python matplotlib astropy scipy sqlite
+conda create --name SKADS python matplotlib astropy scipy SQLAlchemy
 
 
 
