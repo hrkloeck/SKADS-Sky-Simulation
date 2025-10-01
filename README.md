@@ -25,8 +25,6 @@ Step 1: Get the simulations
 
 [download the skads_sex.sql.gz data base 40 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)
 
-(download)[http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz]
-
 gunzip skads_sex.sql.gz
 
 Step 2: build a virtual environment via anaconda
