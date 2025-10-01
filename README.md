@@ -6,9 +6,10 @@ The SKADS Simulated Skies (S-cubed) are a set of simulations of the radio sky pe
 University of Oxford (long time ago), suitable for planning science with the Square Kilometer 
 Array radio telescope.
 
-S-cubed- SEX (Semi-Empirical extragalactic database): This 
+The radio continuum is descriped by the S-cubed-SEX (Semi-Empirical extragalactic database) 
+(Wilman et al. 2008](https://academic.oup.com/mnras/article/388/3/1335/956611)
 
-Radio continuum: Wilman et al.
+The neutral hydrogen is descriped by the SAX
 Obreschkow et al.
 
 
