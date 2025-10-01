@@ -9,7 +9,7 @@ Array radio telescope.
 The radio continuum is descriped by the S-cubed-SEX (Semi-Empirical extragalactic database) 
 [Wilman et al. 2008](https://academic.oup.com/mnras/article/388/3/1335/956611)
 
-The neutral hydrogen is descriped by the SAX
+A virtual sky of extragalactic HI and CO Lines is descriped by the SAX simulations
 [Obreschkow et al. 2009](https://iopscience.iop.org/article/10.1088/0004-637X/703/2/1890)
 
 
@@ -23,7 +23,9 @@ Need the explanation of the simulations!
 
 Step 1: Get the simulations
 
-[download the skads_sex.sql.gz data base 40 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)
+[get the Radio Continuum Simulations skads_sex.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)
+
+[get the HI/CO download the S3SAX01.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/S3SAX01.sql.gz)
 
 gunzip skads_sex.sql.gz
 
