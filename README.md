@@ -7,10 +7,10 @@ University of Oxford (long time ago), suitable for planning science with the Squ
 Array radio telescope.
 
 The radio continuum is descriped by the S-cubed-SEX (Semi-Empirical extragalactic database) 
-(Wilman et al. 2008](https://academic.oup.com/mnras/article/388/3/1335/956611)
+[Wilman et al. 2008](https://academic.oup.com/mnras/article/388/3/1335/956611)
 
 The neutral hydrogen is descriped by the SAX
-Obreschkow et al.
+[Obreschkow et al. 2009](https://iopscience.iop.org/article/10.1088/0004-637X/703/2/1890)
 
 
 They form part of the SKADS program, which is partly funded by the European Union.
