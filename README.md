@@ -22,7 +22,7 @@ Need the explanation of the simulations!
 
 Step 1: Get the simulations
 
-ftp://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz
+[download the skads_sex.sql.gz data base 40 GB](ftp://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)
 
 gunzip skads_sex.sql.gz
 
