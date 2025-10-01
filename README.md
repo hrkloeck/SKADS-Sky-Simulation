@@ -22,7 +22,7 @@ Need the explanation of the simulations!
 
 Step 1: Get the simulations
 
-scp -r ftp/s-cubed
+ftp://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz
 
 gunzip skads_sex.sql.gz
 
