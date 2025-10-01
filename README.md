@@ -24,9 +24,16 @@ Step 1: Get the simulations
 
 scp -r ftp/s-cubed
 
+gunzip skads_sex.sql.gz
+
 Step 2: build a virtual environment via anaconda
 install software
+
 matplotlib, astropy, scipy, matplotylib, sqlite
+
+conda create --name SKADS python matplotlib astropy scipy sqlite
+
+
 
 Step 3: Generate a plot of sources
 
