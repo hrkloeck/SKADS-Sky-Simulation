@@ -34,7 +34,20 @@ matplotlib, astropy, scipy, matplotylib, sqlite
 conda create --name SKADS python matplotlib astropy scipy SQLAlchemy
 
 
+Step 3: access the data base
 
-Step 3: Generate a plot of sources
+conda activate SKADS
+
+python
+from sqlalchemy import create_engine, text
+sqlite_filename = skads_sex.sql'
+engine = create_engine('sqlite:///{sqlite_filename}')
+with engine.connect() as conn:
+  result = conn.execute(text('SELECT * FROM users'))
+  for row in results:
+    print(row)
+
+
+Step 4: Generate a plot of sources
 
 
