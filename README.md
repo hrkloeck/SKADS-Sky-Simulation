@@ -6,12 +6,39 @@ The SKADS Simulated Skies (S-cubed) are a set of simulations of the radio sky pe
 University of Oxford (long time ago), suitable for planning science with the Square Kilometer 
 Array radio telescope.
 
-The radio continuum is descriped by the S-cubed-SEX (Semi-Empirical extragalactic database) 
+The radio continuum is descriped by the S-cubed-SEX (Semi-Empirical
+eXtragalactic (SEX) simulation) 
 [Wilman et al. 2008](https://academic.oup.com/mnras/article/388/3/1335/956611)
+DM density field evolved under linear theory, populated with objects
+from known radio luminosity functions, and with other important physics
+(e.g. non-linear structures, source models) `
+pasted on’
+currently 20x20 deg2 out to z~20 ,
+~2.5x108 simulated sources
 
-A virtual sky of extragalactic HI and CO Lines is descriped by the SAX simulations
+Sky area: 20x20 deg2
+• Redshift range: z = 0 – 20
+• Flux density limits: 10nJy @ 151MHz, 610MHz, 1.4 GHz,
+4.86 GHz & 18 GHz
+• Source populations: radio-quiet AGN
+FRI and FRII radio-loud AGN
+normal star-forming galaxies
+starburst galaxies
+
+
+A virtual sky of extragalactic HI and CO Lines is descriped by the SAX (Semi-Analytic
+eXtragalactic simulations)
+
 [Obreschkow et al. 2009](https://iopscience.iop.org/article/10.1088/0004-637X/703/2/1890)
 
+DM haloes from
+Millennium Simulation. Ascribed HI and
+H2, star formation rates and AGN
+properties: provides insufficient FOV for
+SKADS benchmark
+4x4 deg2 out to z~20 (HI/CO)
+~107 objects
+star-formation continuum OK
 
 They form part of the SKADS program, which is partly funded by the European Union.
 Their purpose is to provide the community with a common testing ground for many of the SKA key
