@@ -36,6 +36,7 @@ matplotlib, astropy, scipy, matplotylib, sqlite
 
 conda create --name SKADS python matplotlib astropy scipy SQLAlchemy
 
+https://github.com/mysql2sqlite/mysql2sqlite
 
 Step 3: access the data base
 
