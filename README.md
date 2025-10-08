@@ -25,9 +25,9 @@ eXtragalactic simulations (SAX)* [(Obreschkow et al. 2009)](https://iopscience.i
 
 - Step 1: Get the simulations
 
-    [get the Radio Continuum Simulations skads_sex.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)
+    [get the Radio Continuum Simulations skads_sex.sql.gz data base 29 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)
 
-    [get the HI/CO download the S3SAX01.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/S3SAX01.sql.gz)
+    [get the HI/CO download the S3SAX01.sql.gz data base 74 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/S3SAX01.sql.gz)
 
 
 - Step 2: convert the mysql dump into a sqlite3 data base 
@@ -47,7 +47,7 @@ eXtragalactic simulations (SAX)* [(Obreschkow et al. 2009)](https://iopscience.i
 
 
     >Yes you are right, why on earth do I not share the sqlite3 data bases! Here they are:
-    [skads_sex_sqlite3.db 107 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex_sqlite3.db), [S3SAX01_sqlite3.db 107 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/S3SAX01_sqlite3.db)
+    [skads_sex_sqlite3.db 108 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex_sqlite3.db), [S3SAX01_sqlite3.db 225 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/S3SAX01_sqlite3.db)
   
 - Step 3: build a virtual environment via anaconda
 
