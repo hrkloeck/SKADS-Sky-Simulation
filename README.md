@@ -25,24 +25,40 @@ eXtragalactic simulations)[Obreschkow et al. 2009](https://iopscience.iop.org/ar
 
 - Step 1: Get the simulations
 
-```[get the Radio Continuum Simulations skads_sex.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)```
+[get the Radio Continuum Simulations skads_sex.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/skads_sex.sql.gz)
 
-```[get the HI/CO download the S3SAX01.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/S3SAX01.sql.gz)```
+[get the HI/CO download the S3SAX01.sql.gz data base 103 GB](http://ftp.mpifr-bonn.mpg.de/s-cubed/S3SAX01.sql.gz)
 
-gunzip skads_sex.sql.gz
 
-Step 2: build a virtual environment via anaconda
+- Step 2: convert the mysql dump into a sqlite3 data base 
+
+```git clone https://github.com/mysql2sqlite/mysql2sqlite```
+
+```gunzip skads_sex.sql.gz```
+
+```gunzip S3SAX01.sql.gz```
+
+copy the mysql2sqlite script into the directory where the mysql dumps are spaced.
+
+```
+```
+```
+```
+
+- Step 2: build a virtual environment via anaconda
 install software
 
 matplotlib, astropy, scipy, matplotylib, sqlite
 
 conda create --name SKADS python matplotlib astropy scipy SQLAlchemy
 
-https://github.com/mysql2sqlite/mysql2sqlite
+```git clone https://github.com/mysql2sqlite/mysql2sqlite```
 
 Step 3: access the data base
 
 conda activate SKADS
+
+
 
 python
 from sqlalchemy import create_engine, text
