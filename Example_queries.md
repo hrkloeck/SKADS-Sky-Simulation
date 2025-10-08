@@ -1,5 +1,5 @@
 # Example Queries for SEX and SAX are listed
-Everyone is wellcome to add here
+These were the original queries examples from the s-ccubed homepage. Everyone is wellcome to add at the bottom.
 
 -SEX Queries
 
@@ -42,3 +42,5 @@ tinction corrected absolute blue magnitude is below -22.
    
    - This query finds all the galaxies in the most massive cluste r in the mock observing cone between z=1.2 and z=1.5. For each galaxy the output table gives the position, the apparent redshift, the integrated HI-flux (Jy km/s), the HI-peak flux density (Jy), the 50% HI-line width (km/s), the HI-half mass radius (arcsec), the inclination (rad), and the extinction corrected absolute blue magnitude. Only galaxies with stellar masses above 10^9 solar masses are retained. 
      select t1.ra, t1.decl, t1.zapparent, t1.hiintflux, t1.hiintflux*t1.hilumpeak as peakfluxdensity, t1.hiwidth50, t1.himajoraxis_halfmass, t1.diskinclination, t2.mag_bdust from milli_galaxies_line t1, milli_galaxies_delu t2, select t2.fofid as maxfofid, t1.box as maxbox from milli_galaxies_line t1, milli_galaxies_delu t2,(select max(t2.mvir) as maxmvir from milli_galaxies_line t1, milli_galaxies_delu t2 where t1.id=t2.id and t1.zapparent between 1.2 and 1.5) tmp1 where t1.id=t2.id and t2.mvir=tmp1.maxmvir and t1.zapparent between 1.2 and 1.5 limit 0,1) tmp2 where t1.id=t2.id and t2.fofid=tmp2.maxfofid and t1.box=tmp2.maxbox and t2.stellarmass*1e10/0.73>1e9
+
+# Your favouried query
