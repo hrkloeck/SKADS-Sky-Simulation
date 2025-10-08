@@ -30,7 +30,7 @@ These are the original query examples from the s-cubed homepage. Everyone is wel
 
    - Get the position, apparent redshift, and integrated HI-flux of the 10 closest galaxies in the cone
      
-     select ra, decl, zapparent, hiintflux from milli_galaxies_line order by distance limit 0,10
+    select ra, decl, zapparent, hiintflux from milli_galaxies_line order by distance limit 0,10
      
    - This query evaluates the number of sources per square degree and unit of redshift z with an HI-peak flux density above 1 micro Jansky. The evaluation is based on the central 0.6x0.6 square degrees of the mock observing cone and redshift bins of dz=0.1. The result is given for the range z=0-4
      
