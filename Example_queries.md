@@ -3,27 +3,27 @@ These were the original queries examples from the s-ccubed homepage. Everyone is
 
 -SEX Queries
 
-    - Get all galaxies with 1400MHz flux density brighter than 100 mJy in the central 1 square degree of the simulation   
+   - Get all galaxies with 1400MHz flux density brighter than 100 mJy in the central 1 square degree of the simulation   
     
-      select * from Galaxies where (pow(10,itot_1400)*1000 > 100.0) and (right_ascension between -0.5 and 0.5) and (declination between -0.5 and 0.5)
+     select * from Galaxies where (pow(10,itot_1400)*1000 > 100.0) and (right_ascension between -0.5 and 0.5) and (declination between -0.5 and 0.5)
 
-    - Define an 843MHz flux density by interpolating between the 1400MHz and 610Mhz flux densities and then search for all galaxies with S_843 > 100 mJy
+   - Define an 843MHz flux density by interpolating between the 1400MHz and 610Mhz flux densities and then search for all galaxies with S_843 > 100 mJy
     
-      select * from select galaxy, sftype, agntype, right_ascension, declination, distance, redshift, itot_610 + ((log10(843)-log10(610))/(log10(1400)-log10(610)))*(itot_1400-itot_610) as itot_843 from Galaxies) as temp where pow(10,temp.itot_843)*1000 > 100.0
+     select * from select galaxy, sftype, agntype, right_ascension, declination, distance, redshift, itot_610 + ((log10(843)-log10(610))/(log10(1400)-log10(610)))*(itot_1400-itot_610) as itot_843 from Galaxies) as temp where pow(10,temp.itot_843)*1000 > 100.0
       
-    - Find the ratio of the core to the total flux density and the spectral index between 1400MHz and 610MHz for all radio-loud AGN between redshift 0.3 and 0.4
+   - Find the ratio of the core to the total flux density and the spectral index between 1400MHz and 610MHz for all radio-loud AGN between redshift 0.3 and 0.4
     
-      select pow(10, Components.i_1400 - Galaxies.itot_1400) as c_tot_ratio, (Galaxies.itot_1400 - Galaxies.itot_610)/log10(1400/610) as sindex from Galaxies inner join Components on Galaxies.galaxy=Components.galaxy where ( Galaxies.agntype = 2 or Galaxies.agntype = 3 or Galaxies.agntype = 4 ) and ( Galaxies.redshift  between 0.3 and 0.4 ) (Components.structure=1)
+     select pow(10, Components.i_1400 - Galaxies.itot_1400) as c_tot_ratio, (Galaxies.itot_1400 - Galaxies.itot_610)/log10(1400/610) as sindex from Galaxies inner join Components on Galaxies.galaxy=Components.galaxy where ( Galaxies.agntype = 2 or Galaxies.agntype = 3 or Galaxies.agntype = 4 ) and ( Galaxies.redshift  between 0.3 and 0.4 ) (Components.structure=1)
       
-    - Find all the galaxies in cluster number 2220 and print out some vital information including the peculiar velocity of the galaxy and the position offset of the galaxy from the center of the cluster
+   - Find all the galaxies in cluster number 2220 and print out some vital information including the peculiar velocity of the galaxy and the position offset of the galaxy from the center of the cluster
     
-      select Galaxies.galaxy, Galaxies.cluster, Galaxies.galaxy, Galaxies.agntype, Galaxies.distance, Galaxies.redshift, (Clusters.redshift - Galaxies.redshift)*2.99792e5 as vel_offset, sqrt(pow(Clusters.right_ascension - Galaxies.right_ascension,2.0) + pow(Clusters.declination - Galaxies.declination,2.0))*3600.0 as pos_offset from Galaxies inner join Clusters on Galaxies.cluster=Clusters.cluster where Clusters.cluster=2220
+     select Galaxies.galaxy, Galaxies.cluster, Galaxies.galaxy, Galaxies.agntype, Galaxies.distance, Galaxies.redshift, (Clusters.redshift - Galaxies.redshift)*2.99792e5 as vel_offset, sqrt(pow(Clusters.right_ascension - Galaxies.right_ascension,2.0) + pow(Clusters.declination - Galaxies.declination,2.0))*3600.0 as pos_offset from Galaxies inner join Clusters on Galaxies.cluster=Clusters.cluster where Clusters.cluster=2220
 
-    - select * from Galaxies where x < 10 and x > 9 and y < 10 and y > 9
+   - select * from Galaxies where x < 10 and x > 9 and y < 10 and y > 9
     
-    - select * from Galaxies where type =4
+   - select * from Galaxies where type =4
     
-    - select * from Galaxies where i_150 > 4 and i_150 < 4.5 and i_610 > 3 and i_610 < 3.25
+   - select * from Galaxies where i_150 > 4 and i_150 < 4.5 and i_610 > 3 and i_610 < 3.25
 
 
 -SAX Queries
