@@ -40,9 +40,9 @@ eXtragalactic simulations (SAX)* [(Obreschkow et al. 2009)](https://iopscience.i
 
 copy the mysql2sqlite script into the directory where the mysql dumps are spaced.
 
-```mysql2sqlite skads_sex.sql | sqlite3 skads_sex_sqlite3.db```
+```./mysql2sqlite skads_sex.sql | sqlite3 skads_sex_sqlite3.db```
 
-```mysql2sqlite S3SAX01.sql | sqlite3 S3SAX01_sqlite3.db```
+```./mysql2sqlite S3SAX01.sql | sqlite3 S3SAX01_sqlite3.db```
 
 - Step 2: build a virtual environment via anaconda
 install software (assuming you have anaconda installed)
