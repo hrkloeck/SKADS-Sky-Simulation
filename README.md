@@ -59,7 +59,7 @@ python
 import sqlite3
 con        = sqlite3.connect('skads_sex_sqlite3.db')
 cursor     = con.cursor()
-query      = 'select t1.galaxy, t1.itot_151,t2.right_ascension,t2.declination,t2.position_angle,t2.major_axis,t2.minor_axis where t1.galaxy = t2.galaxy limit=10'
+query      = 'select t1.galaxy, t1.itot_151,t2.right_ascension from Galaxies t1 , Components t2 where t1.galaxy = t2.galaxy limit=10'
 cursor.execute(query)
 for row in cursor.fetchall() :
     print(row)
