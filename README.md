@@ -59,12 +59,20 @@ python
 import sqlite3
 con        = sqlite3.connect('skads_sex_sqlite3.db')
 cursor     = con.cursor()
-query      = 'select t1.galaxy, t1.itot_151,t2.right_ascension from Galaxies t1 , Components t2 where t1.galaxy = t2.galaxy limit=10'
+query      = 'select t1.galaxy, t1.itot_151,t2.right_ascension from Galaxies t1 , Components t2 where t1.galaxy = t2.galaxy limit 5'
 cursor.execute(query)
 for row in cursor.fetchall() :
     print(row)
 ~~~
 
+You should see something like that.
+    ~~~
+    (1, -1.8811, -67.64615)
+    (2, -1.7346, -84.04899)
+    (3, -2.2386, -81.77174)
+    (4, -2.0987, -68.7584)
+    (5, -2.0743, -82.05821)
+    ~~~
 Step 4: Generate a plot of sources
 
 
