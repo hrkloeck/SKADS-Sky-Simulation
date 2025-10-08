@@ -40,12 +40,8 @@ eXtragalactic simulations)[Obreschkow et al. 2009](https://iopscience.iop.org/ar
 
 copy the mysql2sqlite script into the directory where the mysql dumps are spaced.
 
-```
-mysql2sqlite skads_sex.sql | sqlite3 skads_sex_sqlite3.db
-```
-```
-mysql2sqlite S3SAX01.sql | sqlite3 S3SAX01_sqlite3.db
-```
+```mysql2sqlite skads_sex.sql | sqlite3 skads_sex_sqlite3.db```
+```mysql2sqlite S3SAX01.sql | sqlite3 S3SAX01_sqlite3.db```
 
 - Step 2: build a virtual environment via anaconda
 install software
@@ -53,8 +49,6 @@ install software
 matplotlib, astropy, scipy, matplotylib, sqlite
 
 conda create --name SKADS python matplotlib astropy scipy SQLAlchemy
-
-```git clone https://github.com/mysql2sqlite/mysql2sqlite```
 
 Step 3: access the data base
 
