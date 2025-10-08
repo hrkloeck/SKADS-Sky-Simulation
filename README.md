@@ -68,9 +68,13 @@ for row in cursor.fetchall() :
 You should see something like that.
     ```
     (1, -1.8811, -67.64615)
+    
     (2, -1.7346, -84.04899)
+    
     (3, -2.2386, -81.77174)
+    
     (4, -2.0987, -68.7584)
+    
     (5, -2.0743, -82.05821)
     ```
 Step 4: Generate a plot of sources
