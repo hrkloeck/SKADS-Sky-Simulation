@@ -41,10 +41,11 @@ eXtragalactic simulations (SAX)* [(Obreschkow et al. 2009)](https://iopscience.i
 copy the mysql2sqlite script into the directory where the mysql dumps are spaced.
 
 ```mysql2sqlite skads_sex.sql | sqlite3 skads_sex_sqlite3.db```
+
 ```mysql2sqlite S3SAX01.sql | sqlite3 S3SAX01_sqlite3.db```
 
 - Step 2: build a virtual environment via anaconda
-install software
+install software (assuming you have anaconda installed)
 
 matplotlib, astropy, scipy, matplotylib, sqlite
 
@@ -54,17 +55,14 @@ Step 3: access the data base
 
 conda activate SKADS
 
-
-
+~~~
 python
-from sqlalchemy import create_engine, text
-sqlite_filename = skads_sex.sql'
-engine = create_engine('sqlite:///{sqlite_filename}')
-with engine.connect() as conn:
-  result = conn.execute(text('SELECT * FROM users'))
-  for row in results:
-    print(row)
-
+import sqlite3
+con        = sqlite3.connect('skads_sex_sqlite3.db')
+cursor     = con.cursor()
+query      = 'select t1.galaxy, t1.itot_151,t2.right_ascension,t2.declination,t2.position_angle,t2.major_axis,t2.minor_axis where t1.galaxy = t2.galaxy limit=10'
+cursor.execute(query)
+~~~
 
 Step 4: Generate a plot of sources
 
