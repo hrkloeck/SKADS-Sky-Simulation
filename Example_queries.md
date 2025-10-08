@@ -29,18 +29,22 @@ These were the original queries examples from the s-ccubed homepage. Everyone is
 -SAX Queries
 
    - Get the position, apparent redshift, and integrated HI-flux of the 10 closest galaxies in the cone
+     
      select ra, decl, zapparent, hiintflux from milli_galaxies_line order by distance limit 0,10
      
    - This query evaluates the number of sources per square degree and unit of redshift z with an HI-peak flux density above 1 micro Jansky. The evaluation is based on the central 0.6x0.6 square degrees of the mock observing cone and redshift bins of dz=0.1. The result is given for the range z=0-4
+     
     select floor(zapparent*10.0+0.5)/10.0 as z, floor(count(*)*10/(0.6*0.6)) as dNdz from milli_galaxies_line where ra between -0.3 and 0.3 and decl between -0.3 and 0.3 and hiintflux*hilumpeak > 1e-6 and zapparent < 4.05 group by floor(zapparent*10.0+0.5)/10.0 order by z
 
     
    - This query finds the position, the extinction corrected abso
 lute blue magnitude, and the first five CO-line fluxes of the galaxies in the central square degree at redshift z=1.00+-0.05, whose ex
 tinction corrected absolute blue magnitude is below -22.
+
     select t1.ra, t1.decl, t1.zapparent, t1.cointflux_1, t1.cointflux_2, t1.cointflux_3, t1.cointflux_4, t1.cointflux_5, t2.mag_bdust from milli_galaxies_line t1, milli_galaxies_delu t2 where t1.id=t2.id and t1.ra between -0.5 and 0.5 and t1.decl between -0.5 and 0.5 and t1.zapparent between 0.95 and 1.05 and t2.mag_bdust < -22
    
-   - This query finds all the galaxies in the most massive cluste r in the mock observing cone between z=1.2 and z=1.5. For each galaxy the output table gives the position, the apparent redshift, the integrated HI-flux (Jy km/s), the HI-peak flux density (Jy), the 50% HI-line width (km/s), the HI-half mass radius (arcsec), the inclination (rad), and the extinction corrected absolute blue magnitude. Only galaxies with stellar masses above 10^9 solar masses are retained. 
+   - This query finds all the galaxies in the most massive cluste r in the mock observing cone between z=1.2 and z=1.5. For each galaxy the output table gives the position, the apparent redshift, the integrated HI-flux (Jy km/s), the HI-peak flux density (Jy), the 50% HI-line width (km/s), the HI-half mass radius (arcsec), the inclination (rad), and the extinction corrected absolute blue magnitude. Only galaxies with stellar masses above 10^9 solar masses are retained.
+     
      select t1.ra, t1.decl, t1.zapparent, t1.hiintflux, t1.hiintflux*t1.hilumpeak as peakfluxdensity, t1.hiwidth50, t1.himajoraxis_halfmass, t1.diskinclination, t2.mag_bdust from milli_galaxies_line t1, milli_galaxies_delu t2, select t2.fofid as maxfofid, t1.box as maxbox from milli_galaxies_line t1, milli_galaxies_delu t2,(select max(t2.mvir) as maxmvir from milli_galaxies_line t1, milli_galaxies_delu t2 where t1.id=t2.id and t1.zapparent between 1.2 and 1.5) tmp1 where t1.id=t2.id and t2.mvir=tmp1.maxmvir and t1.zapparent between 1.2 and 1.5 limit 0,1) tmp2 where t1.id=t2.id and t2.fofid=tmp2.maxfofid and t1.box=tmp2.maxbox and t2.stellarmass*1e10/0.73>1e9
 
 # Your favouried query
