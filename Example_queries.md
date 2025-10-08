@@ -5,7 +5,7 @@ These are the original query examples from the s-cubed homepage. Everyone is wel
 
    - Get all galaxies with 1400MHz flux density brighter than 100 mJy in the central 1 square degree of the simulation   
     
-      select * from Galaxies where (pow(10,itot_1400)*1000 > 100.0) and (right_ascension between -0.5 and 0.5) and (declination between -0.5 and 0.5)
+    select * from Galaxies where (pow(10,itot_1400)*1000 > 100.0) and (right_ascension between -0.5 and 0.5) and (declination between -0.5 and 0.5)
 
    - Define an 843MHz flux density by interpolating between the 1400MHz and 610Mhz flux densities and then search for all galaxies with S_843 > 100 mJy
     
