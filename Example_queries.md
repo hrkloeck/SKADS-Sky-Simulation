@@ -1,5 +1,5 @@
 # Example Queries for SEX and SAX are listed
-These were the original queries examples from the s-ccubed homepage. Everyone is wellcome to add at the bottom.
+These are the original query examples from the s-cubed homepage. Everyone is wellcome to add at the bottom.
 
 -SEX Queries
 
