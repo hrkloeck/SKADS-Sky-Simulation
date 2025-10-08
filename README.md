@@ -48,9 +48,7 @@ eXtragalactic simulations (SAX)* [(Obreschkow et al. 2009)](https://iopscience.i
 
     install software (assuming you have anaconda installed)
 
-    matplotlib, astropy, scipy, matplotylib, sqlite
-
-    ```conda create --name SKADS python matplotlib astropy scipy SQLAlchemy```
+    ```conda create --name SKADS python matplotlib astropy scipy```
 
 - Step 4: access the data base
 
