@@ -77,6 +77,5 @@ You should see something like that.
     
     (5, -2.0743, -82.05821)
     
-Step 4: Generate a plot of sources
 
 
