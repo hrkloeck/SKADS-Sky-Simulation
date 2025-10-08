@@ -7,7 +7,7 @@ University of Oxford (long time ago), suitable for planning science with the Squ
 Array radio telescope. Here you find the information needed to use these simulations.
 
 
-*The radio continuum is descriped by the S-cubed - Semi-Empirical
+*The radio continuum is descriped by the Semi-Empirical
 eXtragalactic (SEX) simulation* [(Wilman et al. 2008)](https://academic.oup.com/mnras/article/388/3/1335/956611)
 
 >We have developed a semi-empirical simulation of the extragalactic radio continuum sky suitable for aiding the design of next generation radio interferometers such as the Square Kilometre Array (SKA). The emphasis is on modelling the large-scale cosmological distribution of radio sources rather than the internal structure of individual galaxies. Here we provide a description of the simulation to accompany the online release of a catalogue of ≃320 million simulated radio sources. The simulation covers a sky area of 20 × 20 deg2– a plausible upper limit to the instantaneous field of view attainable with future (e.g. SKA) aperture array technologies – out to a cosmological redshift of z= 20, and down to flux density limits of 10 nJy at 151, 610 MHz, 1.4, 4.86 and 18 GHz. Five distinct source types are included: radio-quiet active galactic nuclei (AGN), radio-loud AGN of the Fanaroff–Riley type I (FR I) and FR II structural classes, and star-forming galaxies, the latter split into populations of quiescent and starbursting galaxies.
