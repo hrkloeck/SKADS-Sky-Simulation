@@ -1,4 +1,4 @@
-# Example of thye OLD Queries for SEX and SAX are listed (note these might not work on sqlite3 data bases)
+# Example of the OLD Queries for SEX and SAX are listed (note these might not work on sqlite3 data bases)
 These are the original query examples from the s-cubed homepage. Everyone is wellcome to add at the bottom.
 
 -SEX Queries
